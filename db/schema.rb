@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2020_04_13_144943) do
     t.string "category"
     t.string "description"
     t.string "user_id"
+    t.string "recipe_url"
   end
 
   create_table "reviews", force: :cascade do |t|
