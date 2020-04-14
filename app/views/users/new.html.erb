@@ -1,4 +1,4 @@
-<h1>Please Log-in or Sign up to Create recipes!</h1>
+<h1>Please Sign up to Create recipes!</h1>
 <%= form_with(model: @user) do |form| %>
 
 <label> Enter Your Name: </label>
@@ -9,7 +9,9 @@
         <br>
 <label> Enter a Password: </label>
     <%= form.password_field(:password) %>
-        <br>
+    <br>
+<label> Put an Image </label>
+    <%=form.text_field(:img_url)%>
         <br>
 <%= form.submit %>
 
