@@ -1,0 +1,22 @@
+<h3>Log-in</h3>
+<% if flash[:errors]%>
+<% flash[:errors].each do |error|%>
+<%= error%>
+<br>
+<%end%>
+<%end%>
+<%= form_with({ method:'POST', url: '/users/login' }) do  | form | %>
+<div>       
+<label>Username</label>        
+<%= form.text_field(:username) %>
+<br>    
+<label>Password</label>
+<%= form.password_field(:password) %> 
+<br>   
+<%= form.submit("Login") %>
+<%end %> 
+<br>
+<br>
+ <label> OR </label>
+
+ <a href="/users/new">Sign-up</a>
