@@ -1,0 +1,9 @@
+<h1>Profile of <%=@user.user_name%></h1>
+<label>Name:</label>
+<%=@user.name%>
+<br>
+<label>Recipes:</label>
+<% @user.recipes.each do |recipe|%>
+    <li><%= recipe.name %></li>
+    <br>
+    <% end %>

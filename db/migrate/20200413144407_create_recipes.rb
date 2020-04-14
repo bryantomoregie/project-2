@@ -5,6 +5,7 @@ class CreateRecipes < ActiveRecord::Migration[6.0]
       t.string :category
       t.string :description
       t.string :user_id
+      t.string :recipe_url
     end
   end
 end

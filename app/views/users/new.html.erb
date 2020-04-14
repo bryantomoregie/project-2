@@ -1,0 +1,17 @@
+<h1>Please Log-in or Sign up to Create recipes!</h1>
+<%= form_with(model: @user) do |form| %>
+
+<label> Enter Your Name: </label>
+    <%= form.text_field(:name) %>
+        <br>
+<label> Enter a User Name:  </label>
+    <%= form.text_field(:user_name) %>
+        <br>
+<label> Enter a Password: </label>
+    <%= form.password_field(:password) %>
+        <br>
+        <br>
+<%= form.submit %>
+
+<% end %>
+
