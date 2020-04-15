@@ -1,20 +1,32 @@
 <style>
+img{
+    height: 40%;
+    width: 40%;
+}
 </style>
 
 <h1> <%= @recipe.name %> </h1><br>
-<img src = "http://tiny.cc/a1q3mz" >
-<br>
-<%= @recipe.description %>
-<br>
-<%= @recipe.category %>
-<br>
-<%= @recipe.ingredient.name%>
+    <img src=<%=@recipe.recipe_url%> >
+    <br>
+<label>Description: </label>
+    <%= @recipe.description %>
+    <br>
+<label>Category: </label>
+    <%= @recipe.category %>
+    <br>
+<label>Ingredients: </label>
+    <% @recipe.ingredients.each do |ingredient| %>
+        <%= ingredient.name %><br>
+        <%= ingredient.calories %><br>
+<%end%>
+<br/>
+<% if(session[:user_id] == @recipe.user.id) %>
+ <p>Click <%= link_to "here to edit", "/recipes/#{@recipe.id}/edit" %> this recipe. </p> 
+        <%= form_with(url: "/recipes/#{@recipe.id}", method: "delete") do |form|%>
+        <%= form.submit("delete recipe")%>
+    <%end%>
+<%end%>
 
 
 
 
-Recipe name
-Picture of meal 
-Description of recipe 
-Ingredients
-Amounts
