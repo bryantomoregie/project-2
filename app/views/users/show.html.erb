@@ -1,12 +1,19 @@
+<style>
+ul.a{
+    list-style-type: circle !important;
+}
+</style>
 <h1>Profile of <%=@user.user_name%></h1>
 <label>Name:</label>
 <%=@user.name%>
 <br>
-<label>Recipes:</label>
-<% @user.recipes.each do |recipe|%>
-    <li><%= recipe.name %></li>
-    <br>
+<label>Recipes:</label><br>
+   <ul>
+    <% @user.recipes.each do |recipe|%>
+        <li><%= link_to recipe.name, recipe %></li>
+        <br>
     <% end %>
+    </ul>
 
 
 <%= form_with(url: "/users/#{@user.id}", method: "delete") do |form|%>

@@ -48,6 +48,16 @@ class UsersController < ApplicationController
        
     end
 
+    def handle_logout
+
+        user = User.find(session[:user_id]) #select current user
+        session[:user_id] = nil         #set id to nill aka logout
+        redirect_to("/homepage")        #redirect to homepage
+
+    end
+
+
+
     def destroy
         # byebug
         if session[:user_id] != params[:id].to_i

@@ -1,10 +1,11 @@
-<%=form_with(model: @recipe) do |form|%>
+<%=form_for(@recipe, :url => {:action => 'update', :id => @recipe.id}) do |form|%>
+
 <label>Name</label>
-<%=form.text_field(:name)%>
-<br>
+    <%=form.text_field(:name)%>
+    <br>
 <label>Category</label>
-<%=form.text_field(:category)%>
-<br>
+    <%=form.text_field(:category)%>
+    <br>
 
 choose a category 
 OR 
