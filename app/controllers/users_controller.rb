@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-    skip_before_action(:check_login, only:[:view_login, :handle_login, :new, :create, :index])
+    skip_before_action(:check_login, only:[:view_login, :handle_login, :new, :create, :index, :show])
     
     def new 
         @user = User.new
@@ -18,6 +18,8 @@ class UsersController < ApplicationController
             password: params[:user][:password],
             img_url: params[:user][:img_url]
         })
+
+        session[:user_id] = @user.id
         
         redirect_to "/homepage"
     end
@@ -45,6 +47,18 @@ class UsersController < ApplicationController
         end
        
     end
+
+    def destroy
+        # byebug
+        if session[:user_id] != params[:id].to_i
+            redirect_to"/users/login"
+        else 
+            @user = User.find(params[:id])
+            @user.destroy
+            session[:user_id] = nil 
+            redirect_to "/homepage"
+        end 
+    end 
 
     
 

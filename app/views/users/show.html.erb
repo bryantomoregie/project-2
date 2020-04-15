@@ -7,3 +7,10 @@
     <li><%= recipe.name %></li>
     <br>
     <% end %>
+
+
+<%= form_with(url: "/users/#{@user.id}", method: "delete") do |form|%>
+<%= form.submit("delete user")%>
+<%end%>
+
+

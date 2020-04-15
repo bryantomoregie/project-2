@@ -30,10 +30,10 @@ An online recipe book a user can search to find the perfect recipe to cook at ho
 If they have a recipe already, they can post it online 
 
 #User Story
-User Logs in with username/password OR user creates a unique username and a password 
+***User Logs in with username/password OR user creates a unique username and a password 
 	-View recipes sorted by meal 
 	-Create a new recipe 
-	-Delete their own account 
+	***-Delete their own account 
 -View what recipes we can make with certain ingredients
 -See other user’s page
 -User can delete their own recipe submission(their own)
