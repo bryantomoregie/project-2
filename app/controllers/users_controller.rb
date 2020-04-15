@@ -8,7 +8,6 @@ class UsersController < ApplicationController
 
     def index
         @users = User.all
-        
     end
 
 
@@ -34,7 +33,7 @@ class UsersController < ApplicationController
 
     def handle_login
         
-        user = User.find_by({user_name: params[:username]})
+        user = User.find_by({user_name: params[:user_name]})
        
         if (user.authenticate(params[:password]))
             session[:user_id] = user.id

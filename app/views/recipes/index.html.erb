@@ -1,1 +1,46 @@
+<style>
+label{
+    font-size: 18px
+}
+.recipe_name{
+    font-size: 36px;
+    text-decoration: none;
+    color: forestgreen;
+    text-shadow: -1px -1px 0 #000;
+}
+.recipe_category{
+    color: brown;
+    font-size: 28px;
+}
+h1{
+    color: forestgreen;
+    font-size: 60px;
+    text-shadow: -2px -2px 0 #000;
+    margin-left: 100px;
+}
+body{
+    background: linear-gradient(135deg, burlywood, saddlebrown);
+    opacity: 0.75;
+}
+.recipe_container {
+    font-size: 20px;
+    /*margin-left: 50px;*/
+    text-align: center;
+}
 
+</style>
+<h1> Recipes </h1>
+<% @recipes.each do |recipe| %>
+<div class="recipe_container">
+        <p><%= link_to recipe.name, recipe, class: "recipe_name" %></p>
+     
+    <label>Style of Food: </label>
+        <text class="recipe_category"><%= recipe.category %></text>
+        <br>
+
+    <label>Contributer: </label>
+        <text class="recipe_user"><%= recipe.user.name %></text>
+        <br>
+        <br>
+</div>
+<% end %>
