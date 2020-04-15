@@ -6,9 +6,25 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
+    <ul>
+      <li><a href="/homepage">Homepage</a></li>
+      <li><a href="/users/login">Login</a></li>
+      <li><a href="/users/new">Sign Up</a></li>
+    </ul>
   </head>
+<style>
+ul{
 
+}
+li {
+  display: inline;
+  padding: 10px;
+  
+}
+a{
+    text-decoration: none;
+}
+</style>
   <body>
     <%= yield %>
   </body>

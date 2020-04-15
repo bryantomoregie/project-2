@@ -1,5 +1,7 @@
 class RecipesController < ApplicationController
 
+
+    skip_before_action(:check_login, only: [:index, :show])
     def index
         @recipes = Recipe.all
     end
@@ -20,6 +22,10 @@ class RecipesController < ApplicationController
             user_id:  @user.id
             })
             redirect_to("/users/#{@user.id}")
+    end
+
+    def show
+        @recipe = Recipe.find(params[:id])
     end
 
      

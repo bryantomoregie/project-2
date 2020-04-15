@@ -46,3 +46,5 @@ Save recipe for later, a list of recipes we want to make someday
 List of all recipes the user has created(cookbook)
 Calories ?
 
+April 14th all cases of username now = user_name for consistency 
+

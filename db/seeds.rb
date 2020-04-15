@@ -15,7 +15,7 @@ Amount.destroy_all
 array = ["italian", "greek", "french", "southern", "american", "chinese", "japanese"]
 
 10.times do
-User.create(name: Faker::Name.name, password: Faker::Internet.password, user_name: Faker::Internet.username(specifier: 5..8), img_url: Faker::Avatar.image)
+User.create(name: Faker::Name.name, password: Faker::Internet.password, user_name: Faker::Internet.user_name(specifier: 5..8), img_url: Faker::Avatar.image)
 end
 
 10.times do 
