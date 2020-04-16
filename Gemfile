@@ -55,3 +55,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'faker'
 gem "bcrypt", "~> 3.1"
+gem 'httparty', '~> 0.13.7'

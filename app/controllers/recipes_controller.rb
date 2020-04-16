@@ -48,6 +48,11 @@ class RecipesController < ApplicationController
         @recipe.destroy
         redirect_to "/users/#{session[:user_id]}"
     end
+
+    def call_api
+        
+
+    end
         
 
      
