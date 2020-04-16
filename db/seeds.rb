@@ -12,6 +12,29 @@ Review.destroy_all
 Ingredient.destroy_all
 Amount.destroy_all
 
+# create_table "amounts", force: :cascade do |t|
+#     t.integer "ingredient_id"
+#     t.integer "recipe_id"
+#   end
+
+#   create_table "ingredients", force: :cascade do |t|
+#     t.string "name"
+#     t.integer "calories"
+#   end
+
+#   create_table "recipes", force: :cascade do |t|
+#     t.string "name"
+#     t.string "category"
+#     t.string "description"
+#     t.string "user_id"
+#     t.string "recipe_url"
+#   end
+
+def call_api
+    url = 
+    Ingredient.create()
+end
+
 array = ["italian", "greek", "french", "southern", "american", "chinese", "japanese"]
 
 10.times do
