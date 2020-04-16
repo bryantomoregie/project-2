@@ -1,9 +1,15 @@
 class RecipesController < ApplicationController
 
 
-    skip_before_action(:check_login, only: [:index, :show])
+    skip_before_action(:check_login, only: [:index, :show, :category])
     def index
         @recipes = Recipe.all
+        @categories = []
+        @recipes.each do |r|
+            @categories.push(r.category)
+        end
+        
+        @categories = @categories.uniq
     end
 
     def new 
@@ -49,10 +55,15 @@ class RecipesController < ApplicationController
         redirect_to "/users/#{session[:user_id]}"
     end
 
-    def call_api
+    def category
         
-
+        @recipes = Recipe.all
+        @specific_category = @recipes.select do |r|
+            r.category == params[:category]
+        end
+        @category = params[:category]
     end
+
         
 
      
