@@ -24,7 +24,7 @@ Things you may want to cover:
 * ...
 #Goals for tonight and Thursday
 -Seed file and possibly API's
--Add sort for recipes page(s)
+****-Add sort for recipes page(s)
 -Validation messages(login, permission, etc)
 -styling
 -ingredients/calories / total

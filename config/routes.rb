@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get('/users/login', { to: 'users#view_login' })
   post('/users/login', { to: 'users#handle_login' })
   get('/users/logout', {to: 'users#handle_logout' })
+  get('/recipes/category', {to: 'recipes#category'})
   resources :recipes
   resources :amounts
   resources :users
