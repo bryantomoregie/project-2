@@ -6,10 +6,14 @@ class ApplicationController < ActionController::Base
 
   def homepage
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 
 >>>>>>> 1bcd4ce3105312450238953d6b1d6c890e91cb1a
+=======
+
+>>>>>>> 060add17567e1770b25857bb37c29339c9876c45
   end
 
   def about
