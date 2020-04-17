@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     
     def new 
         @user = User.new
+        @error_messages = flash[:error_messages]
     end 
 
     def index
@@ -16,13 +17,14 @@ class UsersController < ApplicationController
 
 
     def view_login
+        @login_errors = flash[:errors]
         render(:login)
     end
 
     def handle_login
         
         user = User.find_by({user_name: params[:user_name]})
-    
+    byebug
         if(user.authenticate(params[:password]))
             session[:user_id] = user.id
             redirect_to "/homepage"

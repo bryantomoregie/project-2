@@ -14,8 +14,15 @@ class ApplicationController < ActionController::Base
   def check_login
     if (session[:user_id] == nil)
       redirect_to "/users/login"
+    else
+      @user = User.find(session[:user_id])
     end
   end
+
+
+
+
+
 
   
 end
