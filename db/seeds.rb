@@ -67,7 +67,7 @@ ingredient21 = Ingredient.create(name: "Orange juice", calories: 60)
 
 amount1 = Amount.create(ingredient_id: ingredient1.id, recipe_id: recipe1.id, measurement: "200 grams")
 amount2 = Amount.create(ingredient_id: ingredient2.id, recipe_id: recipe1.id, measurement: "1 cup")
-amount3 = Amount.create(ingredient_id: ingredient7.id, recipe_id: recipe1.id, meaurement: "1 cup")
+amount3 = Amount.create(ingredient_id: ingredient7.id, recipe_id: recipe1.id, measurement: "1 cup")
 amount4 = Amount.create(ingredient_id: ingredient11.id, recipe_id: recipe1.id, measurement: "1 cup")
 amount5 = Amount.create(ingredient_id: ingredient11.id, recipe_id: recipe2.id, measurement: "1 cup")
 amount6 = Amount.create(ingredient_id: ingredient15.id, recipe_id: recipe2.id, measurement: "1 packet")
@@ -83,13 +83,13 @@ amount15 = Amount.create(ingredient_id: ingredient1.id, recipe_id: recipe4.id, m
 amount16 = Amount.create(ingredient_id: ingredient2.id, recipe_id: recipe5.id, measurement: "4 cups")
 amount17 = Amount.create(ingredient_id: ingredient5.id, recipe_id: recipe5.id, measurement: "2 sticks")
 amount18 = Amount.create(ingredient_id: ingredient2.id, recipe_id: recipe6.id, measurement: "4 cups")
-amount19 = Amount.create(ingredient_id: ingredient5.id, recipe_id: recipe6.id, measurement: "2 sticks"
+amount19 = Amount.create(ingredient_id: ingredient5.id, recipe_id: recipe6.id, measurement: "2 sticks")
 amount20 = Amount.create(ingredient_id: ingredient9.id, recipe_id: recipe7.id, measurement: "100 grams")
-amount21 = Amount.create(ingredient_id: ingredient16.id, recipe_id: recipe7.id, measurement: ".5 cup"
+amount21 = Amount.create(ingredient_id: ingredient16.id, recipe_id: recipe7.id, measurement: ".5 cup")
 amount22 = Amount.create(ingredient_id: ingredient1.id, recipe_id: recipe8.id, measurement: " 6 pcs")
-amount23 = Amount.create(ingredient_id: ingredient2.id, recipe_id: recipe8.id, measurement: "2 cups"
+amount23 = Amount.create(ingredient_id: ingredient2.id, recipe_id: recipe8.id, measurement: "2 cups")
 amount24 = Amount.create(ingredient_id: ingredient5.id, recipe_id: recipe8.id, measurement: "1 stick")
-amount25 = Amount.create(ingredient_id: ingredient5.id, recipe_id: recipe9.id, measurement: "2 sticks"
+amount25 = Amount.create(ingredient_id: ingredient5.id, recipe_id: recipe9.id, measurement: "2 sticks")
 amount26 = Amount.create(ingredient_id: ingredient2.id, recipe_id: recipe9.id, measurement: "3 cups")
 amount27 = Amount.create(ingredient_id: ingredient13.id, recipe_id: recipe9.id, measurement: "Up to you!")
 amount28 = Amount.create(ingredient_id: ingredient19.id, recipe_id: recipe9.id, measurement: "2")
@@ -114,10 +114,12 @@ amount46 = Amount.create(ingredient_id: ingredient3.id, recipe_id: recipe14.id, 
 amount47 = Amount.create(ingredient_id: ingredient4.id, recipe_id: recipe14.id, measurement: "4 cups")
 
 
-10.times do 
-Review.create(author: Faker::Name.name, comments: Faker::Books::Dune.quote, ratings: rand(1..10), recipe_id: Recipe.all.sample.id)
-end
 
 
+# t.string "author"
+# t.string "comments"
+# t.integer "ratings"
+# t.integer "recipe_id"
 
+Review.create(author:, comments:, ratings: rand(1..10), recipe_id:)
 
