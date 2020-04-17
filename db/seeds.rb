@@ -114,10 +114,12 @@ amount46 = Amount.create(ingredient_id: ingredient3.id, recipe_id: recipe14.id, 
 amount47 = Amount.create(ingredient_id: ingredient4.id, recipe_id: recipe14.id, measurement: "4 cups")
 
 
-10.times do 
-Review.create(author: Faker::Name.name, comments: Faker::Books::Dune.quote, ratings: rand(1..10), recipe_id: Recipe.all.sample.id)
-end
 
 
+# t.string "author"
+# t.string "comments"
+# t.integer "ratings"
+# t.integer "recipe_id"
 
+Review.create(author:, comments:, ratings: rand(1..10), recipe_id:)
 

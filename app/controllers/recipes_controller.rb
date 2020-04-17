@@ -31,6 +31,11 @@ class RecipesController < ApplicationController
 
     def show
         @recipe = Recipe.find(params[:id])
+        cal = @recipe.ingredients.map do |ing| 
+            ing.calories
+        end
+        @cal_total = cal.reduce(0, :+)
+            
     end
 
     def edit
