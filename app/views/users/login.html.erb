@@ -1,8 +1,8 @@
 <h3>Log-in</h3>
-<% if flash[:errors]%>
-<% flash[:errors].each do |error|%>
-<%= error%>
-<br>
+    <% if flash[:errors] != nil %>
+    <% flash[:errors].each do |error|%>
+        <%= error%>
+    <br>
 <%end%>
 <%end%>
 <%= form_with({ method:'POST', url: '/users/login' }) do  | form | %>

@@ -16,5 +16,11 @@ class User < ApplicationRecord
             self.errors.add(:user_name, "must be provided")
         end
     end
+
+    # def inval_login 
+
+    #     if (User.all.include?(params[:user_name])
+    #     end
+    # end
 end
 
