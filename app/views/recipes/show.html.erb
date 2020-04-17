@@ -33,6 +33,14 @@ img{
         <%= form.submit("delete recipe")%>
     <%end%>
 <%end%>
+<label>Reviews: </label><br>
+    <% @reviews.each do |review| %>
+    <label> Author: </label>
+        <%= review.author %><br>
+        <%= review.comments %><br>
+    <label>Rating:</label>
+        <%= review.ratings %><br>
+<%end%>
 
 
 
