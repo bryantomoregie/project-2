@@ -3,28 +3,33 @@ img{
     height: 40%;
     width: 40%;
 }
+body{
+    background: url("https://img.freepik.com/free-photo/light-brown-wooden-textured-background_53876-75016.jpg?size=626&ext=jpg");
+
+  
+}
 </style>
 
 <h1> <%= @recipe.name %> </h1><br>
     <img src=<%=@recipe.recipe_url%> >
     <br>
-<label>Directions: </label>
+<h2>Directions: </h2>
 <div class="directions">
     <%= @recipe.description %>
 </div>
     <br>
-<label>Category: </label>
+<h2>Category: </h2>
     <%= @recipe.category %>
     <br><br>
-<label>Ingredients: </label>
+<h2>Ingredients: </h2>
     <% @recipe.ingredients.each do |ingredient| %>
         <li><%= ingredient.name %></li><br>
 <%end%>
-<label> Amounts: </label>
+<h2> Amounts: </h2>
     <% @recipe.amounts.each do |amount| %>
         <li><%= amount.measurement %></li>
     <% end %><br>
-<label>Total Calories: </label>
+<h2>Total Calories: </h2>
     <%= @cal_total %>
 <br/>
 <% if(session[:user_id] == @recipe.user.id) %>
