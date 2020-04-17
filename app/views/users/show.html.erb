@@ -20,9 +20,10 @@ body{
     <% end %>
     </ul>
 
-
+<% if session[:user_id] == @user.id%>
 <%= form_with(url: "/users/#{@user.id}", method: "delete") do |form|%>
 <%= form.submit("delete user")%>
+<%end%>
 <%end%>
 
 
