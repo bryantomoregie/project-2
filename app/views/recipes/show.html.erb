@@ -18,6 +18,10 @@ img{
     <% @recipe.ingredients.each do |ingredient| %>
         <li><%= ingredient.name %></li><br>
 <%end%>
+<label> Amounts: </label>
+    <% @recipe.amounts.each do |amount| %>
+        <li><%= amount.measurement %></li>
+    <% end %>
 <label>Total Calories: </label>
     <%= @cal_total %>
 <br/>
