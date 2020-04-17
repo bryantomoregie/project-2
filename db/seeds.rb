@@ -19,7 +19,7 @@ Amount.destroy_all
 # end
 
 # call_api
-array = ["Italian","Mexican", "French", "Southern", "American", "Chinese", "Japanese"]
+array = ["Breakfast", "Lunch", "Dinner"]
 
 10.times do
 User.create(name: Faker::Name.name, password: Faker::Internet.password, user_name: Faker::Internet.user_name(specifier: 5..8), img_url: Faker::Avatar.image)
@@ -114,12 +114,27 @@ amount46 = Amount.create(ingredient_id: ingredient3.id, recipe_id: recipe14.id, 
 amount47 = Amount.create(ingredient_id: ingredient4.id, recipe_id: recipe14.id, measurement: "4 cups")
 
 
-
-
-# t.string "author"
-# t.string "comments"
-# t.integer "ratings"
-# t.integer "recipe_id"
-
-Review.create(author:, comments:, ratings: rand(1..10), recipe_id:)
-
+review1 = Review.create(author:"Lisa", comments:"Great recipe!", ratings: rand(1..10), recipe_id: recipe1.id)
+review2 = Review.create(author:"Monica", comments:"I love pizza! Thanks for sharing!", ratings: rand(1..10), recipe_id: recipe1.id)
+review3 = Review.create(author:"Gordon Ramsey", comments:"Great recipe!", ratings: rand(1..10), recipe_id: recipe2.id)
+review4 = Review.create(author:"Lisa", comments:"Great recipe!", ratings: rand(1..10), recipe_id: recipe2.id)
+review5 = Review.create(author:"Raul", comments:"Great recipe!", ratings: rand(1..10), recipe_id: recipe3.id)
+review6 = Review.create(author:"Mishi", comments:"Great recipe! Will try it out", ratings: rand(1..10), recipe_id: recipe3.id)
+review7 = Review.create(author:"Anika", comments:"Great recipe!", ratings: rand(1..10), recipe_id: recipe4.id)
+review8 = Review.create(author:"Lisa", comments:"Great recipe!", ratings: rand(1..10), recipe_id: recipe4.id)
+review8 = Review.create(author:"Ahmed", comments:"Awesome!", ratings: rand(1..10), recipe_id: recipe5.id)
+review9 = Review.create(author:"Tas", comments:"Great recipe!", ratings: rand(1..10), recipe_id: recipe5.id)
+review10 = Review.create(author:"Lisa", comments:"Great recipe!", ratings: rand(1..10), recipe_id: recipe6.id)
+review11 = Review.create(author:"Josh", comments:"Amazing!", ratings: rand(1..10), recipe_id: recipe6.id)
+review12 = Review.create(author:"Lisa", comments:"Great recipe!", ratings: rand(1..10), recipe_id: recipe7.id)
+review13 = Review.create(author:"Arturo", comments:"Delish!!", ratings: rand(1..10), recipe_id: recipe7.id)
+review14 = Review.create(author:"Aiden", comments:"Making me Hungry!", ratings: rand(1..10), recipe_id: recipe8.id)
+review15 = Review.create(author:"Faizah", comments:"Great recipe!", ratings: rand(1..10), recipe_id: recipe8.id)
+review16 = Review.create(author:"Faizah", comments:"I love waffles. Thanks for sharing!", ratings: rand(1..10), recipe_id: recipe9.id)
+review17 = Review.create(author:"Daphne", comments:"Great recipe!", ratings: rand(1..10), recipe_id: recipe10.id)
+review18 = Review.create(author:"Dianna", comments:"This looks so good!", ratings: rand(1..10), recipe_id: recipe10.id)
+review19 = Review.create(author:"Aiden", comments:"Great recipe!", ratings: rand(1..10), recipe_id: recipe11.id)
+review20 = Review.create(author:"Ruth", comments:"Looks so good, gotta try it out!", ratings: rand(1..10), recipe_id: recipe12.id)
+review21 = Review.create(author:"Steven", comments:"Great recipe!", ratings: rand(1..10), recipe_id: recipe12.id)
+review22 = Review.create(author:"Sabiha", comments:"Thanks for sharing!", ratings: rand(1..10), recipe_id: recipe13.id)
+review23 = Review.create(author:"Moon", comments:"Great recipe!", ratings: rand(1..10), recipe_id: recipe14.id)
