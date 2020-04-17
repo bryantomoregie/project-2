@@ -1,22 +1,22 @@
 <style>
 html{
-    height: 100%;
-}
-body{
-    margin: 0;
+    height: 100%; 
+    width: 100%;
+    background: url("https://cdn.hipwallpaper.com/i/0/68/OG1FLx.jpg");   
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background: linear-gradient(burlywood, saddlebrown)
+    background-size: 1500px
 }
+
 h1{
+    font-family: Century Gothic, sans-serif;
     font-size: 60px;
-    color: forestgreen;
+    color: rgb(0, 0, 0));
     text-align: center; 
     text-shadow: -1px -1px 0 #000;
 }
 h3{
     font-size: 28px;
-    color: forestgreen;
+    color: rgb(222, 232, 202);
     text-align: center;
     text-shadow: -1px -1px 0 #000;
 }
@@ -31,22 +31,66 @@ h3{
     padding: 50px;
 }
 
+.mybutton {
+	-moz-box-shadow:inset 0px 6px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 6px 0px 0px #ffffff;
+	box-shadow:inset 0px 6px 0px 0px #ffffff;
+	background-color:#f9f9f9;
+	-webkit-border-top-left-radius:9px;
+	-moz-border-radius-topleft:9px;
+	border-top-left-radius:9px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:9px;
+	-moz-border-radius-bottomright:9px;
+	border-bottom-right-radius:9px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:18.56px;
+	border:2px solid #dcdcdc;
+	display:inline-block;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	padding-top:15px;
+	padding-bottom:15px;
+	padding-left:42px;
+	padding-right:42px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #ffffff;
+}
+.mybutton:hover {
+	background-color:#e9e9e9;
+}
+.mybutton:active {
+	position:relative;
+	top:1px;
+}
 
+.buttons{
+    text-align: center;
+    margin-top: 180px
+}
 
 </style>
 
 <h1>Watchu cooking today?</h1>
 
-<h3>What are you in the mood for today?</h3>
-<!-- navigation-bar on the top-->
-
-<!-- dropdown menu of recipe catagories --
--- links to page with those types of recipes -->
-
-<!-- create recipe -->
-<div class="links">
+<div class="buttons">
+<a href="/recipes" class="mybutton">Browse Recipes!</a>
+</div>
+<div class= "buttons">
+<div class="myButton">
 <a class="browse_button" href="/recipes">Browse Recipes</a>
+</div>
+<div class="myButton">
 <a class="create_button" href="/recipes/new">Create Recipe</a>
+</div>
 </div>
 
 

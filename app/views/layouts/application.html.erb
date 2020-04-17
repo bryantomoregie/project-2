@@ -7,15 +7,14 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <div class="nav-bar">
-      <li><a href="/homepage">Homepage</a></li>
-      <li><a href="/users/login">Login</a></li>
-      <li><a href="/users/new">Sign Up</a></li>
-      <li><a href="/about">About</a></li>
+      <li id="n1"><a class="nav1" href="/homepage">Homepage</a></li>
+      <li id="n2"><a class="nav2" href="/users/login">Login</a></li>
+      <li id="n3"><a class="nav3" href="/users/new">Sign Up</a></li>
+      <li id="n4"><a class="nav4" href="/about">About</a></li>
       <% if (session[:user_id]) %>
-  
       <% user = User.find(session[:user_id]) %>
-            <li><%= link_to user.user_name, user %></li>
-      <li><%= link_to "Log Out", "/users/logout" %></li>
+            <li id="n5"><%= link_to user.user_name, user %></li>
+            <li id="n6"><%= link_to "Log Out", "/users/logout" %></li>
             <%end%>
 
     </div>
@@ -27,11 +26,10 @@
   height: 24px;
 
 }
-li {
-  
+#n1, #n2, #n3, #n4, #n5, #n6
+{
   display: inline;
   padding: 10px;
-  
 }
 a{
     text-decoration: none;

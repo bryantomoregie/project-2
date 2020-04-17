@@ -8,17 +8,24 @@ img{
 <h1> <%= @recipe.name %> </h1><br>
     <img src=<%=@recipe.recipe_url%> >
     <br>
-<label>Description: </label>
+<label>Directions: </label>
+<div class="directions">
     <%= @recipe.description %>
+</div>
     <br>
 <label>Category: </label>
     <%= @recipe.category %>
-    <br>
+    <br><br>
 <label>Ingredients: </label>
     <% @recipe.ingredients.each do |ingredient| %>
-        <%= ingredient.name %><br>
-        <%= ingredient.calories %><br>
+        <li><%= ingredient.name %></li><br>
 <%end%>
+<label> Amounts: </label>
+    <% @recipe.amounts.each do |amount| %>
+        <li><%= amount.measurement %></li>
+    <% end %><br>
+<label>Total Calories: </label>
+    <%= @cal_total %>
 <br/>
 <% if(session[:user_id] == @recipe.user.id) %>
  <p>Click <%= link_to "here to edit", "/recipes/#{@recipe.id}/edit" %> this recipe. </p> 

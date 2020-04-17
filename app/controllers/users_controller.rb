@@ -24,13 +24,14 @@ class UsersController < ApplicationController
     def handle_login
         
         user = User.find_by({user_name: params[:user_name]})
-    byebug
-        if(user.authenticate(params[:password]))
+    
+        if(user != nil && user.authenticate(params[:password]) )
             session[:user_id] = user.id
             redirect_to "/homepage"
-        else    
-            flash[:errors] = user.errors.full_messages
-            redirect_to"/users/login"
+        else  
+            
+            flash[:errors] = ["invalid log-in"]
+             redirect_to"/users/login"
         end
     
     end
