@@ -1,18 +1,42 @@
 <style>
+h1{
+    text-shadow: 2px 2px #000000;
+    font-size: 56px;
+    text-align: center;
+    color: darkred;
+}
+.directions{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.full_body{
+    text-align: center;
+    font-size: 24px;
+}
 img{
+    border-radius: 25px;
     height: 40%;
     width: 40%;
 }
 body{
-    background: url("https://img.freepik.com/free-photo/light-brown-wooden-textured-background_53876-75016.jpg?size=626&ext=jpg");
-
-  
+    background: url("https://img.freepik.com/free-photo/light-brown-wooden-textured-background_53876-75016.jpg?size=626&ext=jpg"); 
+}
+img{
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.reviews{
+    font-size: 24px;
 }
 </style>
 
 <h1> <%= @recipe.name %> </h1><br>
-    <img src=<%=@recipe.recipe_url%> >
+    <img src="<%=@recipe.recipe_url%>" >
     <br>
+<div class="full_body">
 <h2>Directions: </h2>
 <div class="directions">
     <%= @recipe.description %>
@@ -30,7 +54,7 @@ body{
         <li><%= amount.measurement %></li>
     <% end %><br>
 <h2>Total Calories: </h2>
-    <%= @cal_total %>
+    <p class="cal"><%= @cal_total %> calories</p>
 <br/>
 <% if(session[:user_id] == @recipe.user.id) %>
  <p>Click <%= link_to "here to edit", "/recipes/#{@recipe.id}/edit" %> this recipe. </p> 
@@ -38,14 +62,17 @@ body{
         <%= form.submit("delete recipe")%>
     <%end%>
 <%end%>
-<label>Reviews: </label><br>
+<h2>Reviews: </h2>
+<div class="reviews">
     <% @reviews.each do |review| %>
     <label> Author: </label>
         <%= review.author %><br>
         <%= review.comments %><br>
     <label>Rating:</label>
-        <%= review.ratings %><br>
+        <%= review.ratings %><br><br>
 <%end%>
+</div>
+</div>
 
 
 

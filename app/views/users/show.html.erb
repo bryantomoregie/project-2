@@ -4,19 +4,30 @@ ul.a{
 }
 body{
     background: url("https://img.freepik.com/free-photo/light-brown-wooden-textured-background_53876-75016.jpg?size=626&ext=jpg");
-
-  
+}
+.user_body{
+    font-size: 24px;
+    margin-left: 15px;
+}
+h1{
+    margin-left: 15px;
+}
+.profile_image{
+    height: 150px;
+    width: 150px;
 }
 </style>
 <h1>Profile of <%=@user.user_name%></h1>
+<img class="profile_image" src="<%=@user.img_url%>">
+<div class="user_body">
 <label>Name:</label>
 <%=@user.name%>
-<br>
+<br>    <br>
 <label>Recipes:</label><br>
    <ul>
     <% @user.recipes.each do |recipe|%>
         <li><%= link_to recipe.name, recipe %></li>
-        <br>
+        <br>    
     <% end %>
     </ul>
 
@@ -25,5 +36,6 @@ body{
 <%= form.submit("delete user")%>
 <%end%>
 <%end%>
+</div>
 
 

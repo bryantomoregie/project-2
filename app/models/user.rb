@@ -6,7 +6,7 @@ class User < ApplicationRecord
     
     validate(:invalid_password, :invalid_username)
     def invalid_password
-       if (self.password.length < 8) 
+       if (self.password != nil && self.password.length < 8 ) 
         self.errors.add(:password, "must be longer than 8 digits")
        end
     end
