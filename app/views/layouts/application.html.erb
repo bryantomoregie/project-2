@@ -12,10 +12,9 @@
       <li id="n3"><a class="nav3" href="/users/new">Sign Up</a></li>
       <li id="n4"><a class="nav4" href="/about">About</a></li>
       <% if (session[:user_id]) %>
-  
       <% user = User.find(session[:user_id]) %>
             <li id="n5"><%= link_to user.user_name, user %></li>
-      <li id="n6"><%= link_to "Log Out", "/users/logout" %></li>
+            <li id="n6"><%= link_to "Log Out", "/users/logout" %></li>
             <%end%>
 
     </div>
