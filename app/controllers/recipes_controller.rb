@@ -35,6 +35,7 @@ class RecipesController < ApplicationController
             ing.calories
         end
         @cal_total = cal.reduce(0, :+)
+        @reviews = @recipe.reviews
             
     end
 
