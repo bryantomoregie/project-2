@@ -1,29 +1,44 @@
 <style>
 body{
     background: url("https://img.freepik.com/free-photo/light-brown-wooden-textured-background_53876-75016.jpg?size=626&ext=jpg");
-
-  
+}
+h3{
+    margin-left: 10px;
+    font-size: 38px;
+}
+.login_body{
+    margin-left: 25px;
+    font-size: 24px;
+}
+.login{
+    height: 100px;
+    width: 100px;
+    font-size: 28px;
+}
+.error_style{
+    color: red;
+    font-size: 20px;
 }
 </style>
 <h3>Log-in</h3>
     <% if @login_errors != nil %>
     <% @login_errors.each do |error|%>
-        <%=error%>
+        <li class="error_style"><%=error%></li>
     <br>
 <%end%>
 <%end%>
 <%= form_with({ method:'POST', url: '/users/login' }) do  | form | %>
-<div>       
+<div class="login_body">       
 <label>Username</label>        
 <%= form.text_field(:user_name) %>
-<br>    
+<br>    <br>
 <label>Password</label>
 <%= form.password_field(:password) %> 
-<br>   
-<%= form.submit("Login") %>
+<br>   <br>
+<%= form.submit "Login", :class => "login" %>
 <%end %> 
 <br>
 <br>
- <label> OR </label>
+ <label> OR </label><br><br>
 
  <a href="/users/new">Sign-up</a>
