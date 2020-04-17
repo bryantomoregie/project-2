@@ -8,12 +8,14 @@ img{
 <h1> <%= @recipe.name %> </h1><br>
     <img src=<%=@recipe.recipe_url%> >
     <br>
-<label>Description: </label>
+<label>Directions: </label>
+<div class="directions">
     <%= @recipe.description %>
+</div>
     <br>
 <label>Category: </label>
     <%= @recipe.category %>
-    <br>
+    <br><br>
 <label>Ingredients: </label>
     <% @recipe.ingredients.each do |ingredient| %>
         <li><%= ingredient.name %></li><br>
@@ -21,7 +23,7 @@ img{
 <label> Amounts: </label>
     <% @recipe.amounts.each do |amount| %>
         <li><%= amount.measurement %></li>
-    <% end %>
+    <% end %><br>
 <label>Total Calories: </label>
     <%= @cal_total %>
 <br/>
