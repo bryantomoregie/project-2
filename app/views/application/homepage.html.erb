@@ -13,6 +13,7 @@ h1{
     color: rgb(0, 0, 0));
     text-align: center; 
     text-shadow: -1px -1px 0 #000;
+    background: rgb(255, 239, 59)
 }
 h3{
     font-size: 28px;
@@ -74,17 +75,38 @@ h3{
 
 .buttons{
     text-align: center;
-    margin-top: 180px
+    margin-top: 80px
 }
+.bowl{
+  margin-top: -1000px;
+  margin-bottom: -225px;
+  margin-right: 300px;
+  margin-left: 70px;
+}
+.recipe{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-right: -200px;
+  margin-left: 1px;
+}
+
 
 </style>
 
-<h1>Watchu cooking today?</h1>
+<h1>Today's Meal!</h1>
 
 <div class="buttons">
+<p>
+<a href="/recipes">
+<img class = "bowl" border="0" alt="recipes" src="https://i.pinimg.com/originals/cd/14/0b/cd140b4bd2a5bfa078c9752477ba0c55.gif" width="150" height="150">
+</a>
+</p>
+<p>
+<a href="/recipes/new">
+<img class = "recipe" border="0" alt="recipes" src="https://cdn.clipart.email/fe82d3f54f560b2c860ccb3421c4b2fe_cooking-recipe-book-transparent-png-clipart-free-download-ywd_250-282.gif" width="150" height="150">
+</a>
+</p>
 <a href="/recipes" class="mybutton">Browse Recipes!</a>
-</div>
-<div class="buttons">
 <a href="/recipes/new" class="mybutton">Create Recipes!</a>
 </div>
 
