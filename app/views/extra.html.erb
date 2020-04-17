@@ -2,3 +2,10 @@
 <%=form.collection_select(:recipe_id, @recipes, :id, :name) %>
 
 <%= form_with(url: "/users/#{@user.id}", method: "delete") do |form|%>
+
+body{
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(burlywood, saddlebrown)
+}

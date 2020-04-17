@@ -1,16 +1,24 @@
+<style>
+body{
+    background: url("https://img.freepik.com/free-photo/light-brown-wooden-textured-background_53876-75016.jpg?size=626&ext=jpg");
+
+  
+}
+</style>
+
+<h1> CREATE A RECIPE! </h1>
 <%=form_with(model: @recipe) do |form|%>
 <label>Name</label>
 <%=form.text_field(:name)%>
 <br>
 <label>Category</label>
+
 <%=form.text_field(:category)%>
 <br>
 
-choose a category 
-OR 
-add your own
 <label>Description</label>
-<%=form.text_field(:description)%>
+<br>
+<%=form.text_area(:description)%>
 <br>
 <label>Upload a picture</label>
 <%=form.text_field(:recipe_url)%>
