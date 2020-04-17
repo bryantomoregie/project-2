@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   skip_before_action(:check_login, only:[:homepage, :about])
 
   def homepage
-  
+
   end
 
   def about

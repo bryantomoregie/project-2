@@ -11,29 +11,18 @@
   <div class="header-left">
     <a class="active" href="/homepage">Home</a>
     <a href="/users/login">Log-in</a>
+    <a href="/users/new">Sign-up</a>
     <a href="/about">About</a>
-  </div>
-</div>
-    <div class="nav-bar">
-      <li id="n1"><a class="nav1" href="/homepage">Homepage</a></li>
-      <li id="n2"><a class="nav2" href="/users/login">Login</a></li>
-      <li id="n3"><a class="nav3" href="/users/new">Sign Up</a></li>
-      <li id="n4"><a class="nav4" href="/about">About</a></li>
-      <% if (session[:user_id]) %>
+    <% if (session[:user_id]) %>
       <% user = User.find(session[:user_id]) %>
             <li id="n5"><%= link_to user.user_name, user %></li>
-            <li id="n6"><%= link_to "Log Out", "/users/logout" %></li>
+            <li id="n6"><%= link_to "Log Out", "/users/logout"%></li>
             <%end%>
-
-    </div>
+  </div>
+</div>
   </head>
 <style>
-.nav-bar{
-  overflow: hidden;
-  background-color: white;
-  height: 24px;
 
-}
 #n1, #n2, #n3, #n4, #n5, #n6
 {
   display: inline;
@@ -66,13 +55,13 @@ body{
 
 /* Change the background color on mouse-over */
 .header a:hover {
-  background-color: black;
+  background-color: white;
   color: black;
 }
 
 /* Style the active/current link*/
 .header a.active {
-  background-color: dodgerblue;
+  
   color: black;
 }
 
