@@ -1,20 +1,42 @@
-<%=form_for(@recipe, :url => {:action => 'update', :id => @recipe.id}) do |form|%>
+<style>
+body{
+    background: url("https://img.freepik.com/free-photo/light-brown-wooden-textured-background_53876-75016.jpg?size=626&ext=jpg");  
+}
+.edit_body{
+    margin-left: 50px;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 24px;
+   
+}
+h1{
+    margin-left: 10px;
+    /*color: darkred;*/
+    font-size: 38px;
+}
+.button{
+    height: 250px;
+    margin-left: 70px;
+    width: 150px;
+    font-size: 40px;
 
+}
+</style>
+
+<%=form_for(@recipe, :url => {:action => 'update', :id => @recipe.id}) do |form|%>
+<div class="edit">
 <label>Name</label>
     <%=form.text_field(:name)%>
     <br>
 <label>Category</label>
     <%=form.text_field(:category)%>
     <br>
-
-choose a category 
-OR 
-add your own
 <label>Description</label>
 <%=form.text_field(:description)%>
 <br>
 <label>Upload a picture</label>
 <%=form.text_field(:recipe_url)%>
 <br>
-<%=form.submit%>
+<%=form.submit "Submit", :class => "button" %>
 <% end %>
+</div>

@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
     def invalid_username
         if(self.user_name.length < 5)
-            self.errors.add(:user_name, "must be provided")
+            self.errors.add(:user_name, "must be longer 4 characters")
         end
     end
 

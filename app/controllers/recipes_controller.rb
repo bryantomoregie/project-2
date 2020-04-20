@@ -13,19 +13,23 @@ class RecipesController < ApplicationController
     end
 
     def new 
+        @ingredients = Ingredient.all
         @recipes = Recipe.all
         @recipe = Recipe.new
         @categories = Recipe.all.map {|recipe| recipe.category}
     end
 
     def create
+        byebug
         @recipe = Recipe.create({
             name: params[:recipe][:name],
             category: params[:recipe][:category],
             description: params[:recipe][:description],
             recipe_url: params[:recipe][:recipe_url],
+            ingredient_ids: params[:recipe][:ingredient_ids],
             user_id: session[:user_id]
             })
+         
             redirect_to("/users/#{session[:user_id]}")
     end
 
@@ -44,6 +48,7 @@ class RecipesController < ApplicationController
     end
 
     def update
+
         @recipe = Recipe.find(params[:id])
         @recipe.update({
             name: params[:recipe][:name],
