@@ -1,5 +1,6 @@
 <style>
 body{
+
     background: url("https://img.freepik.com/free-photo/light-brown-wooden-textured-background_53876-75016.jpg?size=626&ext=jpg");  
 }
 .edit_body{
@@ -22,6 +23,8 @@ h1{
 
 }
 </style>
+<%=form_for(@recipe, :url => {:action => 'update', :id => @recipe.id}) do |form|%>
+
 
 <%=form_for(@recipe, :url => {:action => 'update', :id => @recipe.id}) do |form|%>
 <div class="edit">
